@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "example.com/repro/api";
+
+message HelloRequest {
+  string name = 1;
+}

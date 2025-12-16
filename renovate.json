@@ -1,4 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "postUpdateOptions": ["gomodTidy", "gomodMassage", "goGenerate"]
+  "postUpdateOptions": ["gomodTidy", "goGenerate"]
 }

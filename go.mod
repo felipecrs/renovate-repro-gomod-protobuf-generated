@@ -7,7 +7,7 @@ tool google.golang.org/protobuf/cmd/protoc-gen-go
 tool google.golang.org/grpc/cmd/protoc-gen-go-grpc
 
 require (
-	github.com/pkg/errors v0.8.1
+	github.com/pkg/errors v0.9.1
 	google.golang.org/grpc v1.78.0
 	google.golang.org/protobuf v1.36.11
 )

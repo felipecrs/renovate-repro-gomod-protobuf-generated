@@ -1,7 +1,5 @@
 package main
 
-//go:generate api/generate.sh
-
 import (
 	"fmt"
 

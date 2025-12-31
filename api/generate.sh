@@ -20,6 +20,12 @@ fi
 PROTOC_GEN_GO=$(go tool -n protoc-gen-go)
 PROTOC_GEN_GO_DIR=$(dirname "$PROTOC_GEN_GO")
 
-export PATH="$TOOLS_DIR/bin:$PROTOC_GEN_GO_DIR:$PATH"
+PROTOC_GEN_GO_GRPC=$(go tool -n protoc-gen-go-grpc)
+PROTOC_GEN_GO_GRPC_DIR=$(dirname "$PROTOC_GEN_GO_GRPC")
 
-exec protoc --go_out=. --go_opt=paths=source_relative api.proto
+export PATH="$TOOLS_DIR/bin:$PROTOC_GEN_GO_DIR:$PROTOC_GEN_GO_GRPC_DIR:$PATH"
+
+exec protoc \
+    --go_out=. --go_opt=paths=source_relative \
+    --go-grpc_out=. --go-grpc_opt=paths=source_relative \
+    api.proto
